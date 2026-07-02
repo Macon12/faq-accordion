@@ -1,0 +1,212 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Work Sans',sans-serif;
+    background:#f9eeff;
+    color:#301534;
+}
+
+/* ==========================
+   BACKGROUND
+========================== */
+
+.background{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:260px;
+
+    /* Replace with the official SVG */
+    background:url("background-pattern-desktop.svg") center/cover no-repeat;
+    background-color:#2f1533;
+
+    z-index:-1;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.card{
+    width:90%;
+    max-width:360px;
+
+    background:#fff;
+
+    margin:140px auto 50px;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    box-shadow:0 25px 45px rgba(0,0,0,.12);
+}
+
+/* ==========================
+   HEADING
+========================== */
+
+.heading{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:25px;
+}
+
+.heading img{
+    width:28px;
+}
+
+.heading h1{
+    font-size:42px;
+    font-weight:700;
+}
+
+/* ==========================
+   FAQ
+========================== */
+
+.faq{
+    padding:18px 0;
+}
+
+.question{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    cursor:pointer;
+}
+
+.question h3{
+    font-size:16px;
+    font-weight:600;
+    line-height:1.5;
+    transition:.3s;
+}
+
+.question h3:hover{
+    color:#ad28eb;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.toggle-btn{
+    width:30px;
+    height:30px;
+
+    border:none;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:20px;
+    font-weight:700;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    flex-shrink:0;
+
+    transition:.3s;
+}
+
+.plus{
+    background:#ad28eb;
+}
+
+.minus{
+    background:#301534;
+}
+
+.toggle-btn:hover{
+    transform:scale(1.1);
+}
+
+/* ==========================
+   ANSWER
+========================== */
+
+.answer{
+    margin-top:16px;
+    color:#8b6990;
+    line-height:1.7;
+    font-size:15px;
+
+    overflow:hidden;
+
+    transition:all .35s ease;
+}
+
+.faq:not(.active) .answer{
+    display:none;
+}
+
+/* ==========================
+   DIVIDER
+========================== */
+
+hr{
+    border:none;
+    border-top:1px solid #ece5ef;
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (min-width:768px){
+
+    .background{
+        height:320px;
+    }
+
+    .card{
+        max-width:600px;
+        padding:40px;
+        margin-top:170px;
+    }
+
+    .heading img{
+        width:36px;
+    }
+
+    .heading h1{
+        font-size:56px;
+    }
+
+    .question h3{
+        font-size:18px;
+    }
+
+    .answer{
+        font-size:16px;
+    }
+}
+
+/* ==========================
+   MOBILE BACKGROUND
+========================== */
+
+@media (max-width:767px){
+
+    .background{
+        background:url("background-pattern-mobile.svg") center/cover no-repeat;
+        background-color:#2f1533;
+    }
+
+}
